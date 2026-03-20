@@ -71,3 +71,11 @@ Once the math/frontend files have been uploaded to Stake Engine, launcing the ga
 
 Pressing ***Place BET*** will populate the *play/ response* field with the RGS game round structure. 
 If the round-win is >0, press ***END ROUND*** to finalise the bet, which will subsequently update your balance and close the bet.
+
+---
+
+## Alternate Sample: Degen Blackjack Side Bet
+
+If you want a card-style side bet instead of the minimal *fifty-fifty* example, see `games/degen_blackjack_sidebet/`.
+That sample emits a player hand, dealer hand, themed card metadata, and a custom verdict event so a side-bet frontend can render a blackjack-style flow without reel logic.
+It also includes `games/degen_blackjack_sidebet/play.py` if you want a quick terminal-playable version inside the repo.
