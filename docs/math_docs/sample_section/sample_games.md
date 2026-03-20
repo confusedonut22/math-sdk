@@ -137,3 +137,30 @@ Each time a prize symbol lands on the board, the 3 available spins reset.
 Prizes are sticky and evaluated once the player has no new spins remaining. 
 
 This game has a purchase-only 'super-spin' mode. This mode can only be activated through a buy menu and cannot be accessed using Scatters like bonus-games
+
+## Degen Blackjack Side Bet
+
+* A lightweight custom side-bet sample with no reels and no freegame flow.
+* Uses blackjack-style hand scoring with themed cards such as **Degen Ace**, **Whale King**, and **Moon Queen**.
+* Emits custom `dealCards` and `degenVerdict` events alongside the standard `winInfo` and `finalWin` events, making it a good reference for card-based side-bet frontends.
+* Includes a terminal runner at `games/degen_blackjack_sidebet/play.py` so you can play through the themed rounds directly from this repo.
+
+#### Round rules
+
+The player and dealer are each dealt themed cards and scored with standard blackjack totals, including ace softening from 11 to 1 when needed.
+
+Outcome examples are intentionally cycled through across simulations so the sample output library contains:
+
+* player blackjack
+* standard player wins
+* pushes
+* dealer wins
+* player busts
+* dealer busts
+
+#### Payouts
+
+* **5x** for a player blackjack
+* **2x** for a player win or dealer bust
+* **1x** for a push
+* **0x** for a player loss or bust
